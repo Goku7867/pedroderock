@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro is Rock Hard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #4e4376, #2b5876);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 90%;
+        }
+        .image-container img {
+            width: 60%;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .links a img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .falling-rock {
+            position: absolute;
+            top: -100px;
+            width: 50px;
+            height: 50px;
+            background: url('Untitled design.png') no-repeat center center;
+            background-size: contain;
+            animation: fall 5s linear infinite;
+        }
+        .falling-rock.left {
+            left: 0;
+            animation: fall-left 5s linear infinite;
+        }
+        .falling-rock.right {
+            right: 0;
+            animation: fall-right 5s linear infinite;
+        }
+
+        @keyframes fall-left {
+            0% {
+                transform: translateY(-100px) translateX(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(50vh) translateX(50px);
+            }
+            100% {
+                transform: translateY(100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fall-right {
+            0% {
+                transform: translateY(-100px) translateX(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(50vh) translateX(-50px);
+            }
+            100% {
+                transform: translateY(100vh) translateX(-100px);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="image-container">
+            <img src="1080x360.jpg" alt="First Image">
+            <img src="GesS-hfXgAYtOsP.jpg" alt="Second Image">
+        </div>
+        <div class="links">
+            <a href="https://t.co/w4qqX4dyqb" target="_blank">
+                <img src="Telegram_2019_Logo.svg.png" alt="Telegram">
+            </a>
+            <a href="https://x.com/rockmysol" target="_blank">
+                <img src="X_logo.jpg" alt="X (formerly Twitter)">
+            </a>
+        </div>
+    </div>
+    <div class="falling-rock left"></div>
+    <div class="falling-rock right" style="animation-delay: 2.5s;"></div>
+</body>
+</html>
